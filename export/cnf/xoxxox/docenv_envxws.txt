@@ -1,0 +1,31 @@
+FROM ubuntu:24.04
+
+ENV OPTAPT=""
+#ENV OPTAPT="-o Acquire::AllowInsecureRepositories=true -o Acquire::AllowDowngradeToInsecureRepositories=true"
+RUN \
+  apt-get ${OPTAPT} -y update && \
+  apt-get ${OPTAPT} -y upgrade && \
+  apt-get ${OPTAPT} -y install --no-install-recommends twm && \
+  apt-get ${OPTAPT} -y install --no-install-recommends xfonts-base xfonts-75dpi xfonts-100dpi && \
+  apt-get ${OPTAPT} -y install --no-install-recommends xrdp xorgxrdp && \
+  apt-get ${OPTAPT} -y install --no-install-recommends openssh-client && \
+  apt-get ${OPTAPT} -y install --no-install-recommends python3 python3-venv && \
+  rm -rf /var/lib/apt/lists/*
+
+ENV DIRXCF=/etc/X11/xorg.conf.d
+ENV CNFSHM=10-no-mitshm.conf
+COPY --chmod=644 ${CNFSHM} ${DIRXCF}
+
+ENV DIRSSH=/root/.ssh
+ENV KEYPRV=id_ed25519
+RUN mkdir -p ${DIRSSH} && chmod 700 ${DIRSSH}
+COPY --chmod=600 ${KEYPRV} ${DIRSSH}
+
+ENV USRRDP=usrrdp
+ENV PWDRDP=abcd1234
+RUN useradd -m -s /bin/bash ${USRRDP}
+RUN echo ${USRRDP}:${PWDRDP} | chpasswd
+
+ENV DIRPYT=/env/python
+RUN python3 -m venv ${DIRPYT}
+RUN ${DIRPYT}/bin/pip3 install --no-cache-dir aiohttp
