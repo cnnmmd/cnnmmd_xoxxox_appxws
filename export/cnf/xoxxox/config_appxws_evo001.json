@@ -1,0 +1,5 @@
+{
+  "usrapp": "usrapp",
+  "envapp": "xoxxox_envevo",
+  "script": "/env/python/bin/python3 /opt/envevo/evogym/examples/gym_test.py"
+}

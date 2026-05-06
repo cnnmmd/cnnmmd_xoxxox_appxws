@@ -1,0 +1,5 @@
+{
+  "usrapp": "usrapp",
+  "envapp": "xoxxox_envmjc",
+  "script": "/env/python/bin/python -m mujoco.viewer --mjcf=/env/python/lib/python3.12/site-packages/mujoco/testdata/model.xml"
+}
