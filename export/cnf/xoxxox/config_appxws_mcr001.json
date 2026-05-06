@@ -1,5 +1,5 @@
 {
   "usrapp": "usrapp",
   "envapp": "xoxxox_envgym",
-  "script": "/env/python/bin/python /opt/common/bin/xoxxox/rungym.sh mcr"
+  "script": "/env/python/bin/python /opt/common/bin/xoxxox/rungym.py mcr"
 }
