@@ -2,6 +2,5 @@
   "defxws_nod": "-",
   "defxws_cnf": "-",
   "lstxws_nod": ["xoxxox_appxws"],
-  "lstxws_cnf": ["xoxxox/config_appxws_nil001", "xoxxox/config_appxws_acr001", "xoxxox/config_appxws_cpl001", "xoxxox/config_appxws_mcr001", "xoxxox/config_appxws_evo001", "xoxxox/config_appxws_edt001", "xoxxox/config_appxws_mjc001"]
+  "lstxws_cnf": ["xoxxox/config_appxws_nil001", "xoxxox/config_appxws_acr001", "xoxxox/config_appxws_cpl001", "xoxxox/config_appxws_mcr001", "xoxxox/config_appxws_evo001", "xoxxox/config_appxws_edt001", "xoxxox/config_appxws_mjc001", "xoxxox/config_appxws_mtv001"]
 }
-
