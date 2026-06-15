@@ -1,5 +1,5 @@
 {
   "usrapp": "usrapp",
   "envapp": "xoxxox_envmtv",
-  "script": "/env/python/bin/python /opt/common/bin/xoxxox/runmtv.py"
+  "script": "/env/python/bin/python /opt/common/bin/xoxxox/runmtv_001.py"
 }
