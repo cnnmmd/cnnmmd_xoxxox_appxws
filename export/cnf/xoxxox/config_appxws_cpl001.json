@@ -1,5 +1,0 @@
-{
-  "usrapp": "usrapp",
-  "envapp": "xoxxox_envgym",
-  "script": "/env/python/bin/python /opt/common/bin/xoxxox/rungym.py cpl"
-}
