@@ -1,5 +1,0 @@
-{
-  "usrapp": "usrapp",
-  "envapp": "xoxxox_envevo",
-  "script": "/env/python/bin/python3 /opt/envevo/evogym-design-tool/src/main.py"
-}
